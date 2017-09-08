@@ -82,6 +82,7 @@
             - mdickin.markdown-shortcuts
             - darkriszty.markdown-table-prettify
             - mauve.terraform
+            - DavidAnson.vscode-markdownlint
           visual_studio_code_extensions_absent:
             - seanmcbreen.Spell
 
