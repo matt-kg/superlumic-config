@@ -16,7 +16,7 @@
 
     - name: install python modules
       pip: name={{item}} state=latest
-      with items:
+      with_items:
         - credstash
 
     - name: install personal cask applications
