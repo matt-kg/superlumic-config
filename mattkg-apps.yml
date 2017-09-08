@@ -4,6 +4,11 @@
   connection: local
 
   tasks:
+    - name: install brew formulae
+      homebrew: name={{item}} state=latest
+      with_items:
+        - terraform
+
     - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
