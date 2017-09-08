@@ -28,8 +28,7 @@
         - sourcetree
         - tunnelblick
         - kindle
-
-
+        - microsoft-office
 
     - name: install personal cask utilities
       homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
