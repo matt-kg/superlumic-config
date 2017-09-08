@@ -37,5 +37,5 @@
   name: roderik.superlumic-skylab
 
 - src: https://github.com/gantsign/ansible-role-visual-studio-code-extensions.git
-  name: gantsign.visual-studio-code
+  name: gantsign.visual-studio-code-extensions
   
