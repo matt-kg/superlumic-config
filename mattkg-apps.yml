@@ -4,6 +4,12 @@
   connection: local
 
   tasks:
+    - name: add necessary homebrew taps
+      homebrew_tap: tap={{item}} state=present
+      with_items:
+        - versent/homebrew-taps #should already be there from intial build-out
+        - wallix/awless
+
     - name: install brew formulae
       homebrew: name={{item}} state=latest
       with_items:
