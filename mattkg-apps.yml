@@ -8,6 +8,16 @@
       homebrew: name={{item}} state=latest
       with_items:
         - terraform
+        - awscli
+        - awless
+        - jq
+        - unicreds
+        - python3
+
+    - name: install python modules
+      pip: name={{item}} state=latest
+      with items:
+        - credstash
 
     - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
