@@ -11,12 +11,32 @@
         # - slack #installed via AppStore
         - google-chrome
         - chrome-devtools
+        - firefox
         - tidal
+        - grammarly
+        - dropbox
+        - vmware-fusion
+        - docker
+        - plex-media-player
+        - evernote
+        - vlc
+        - sourcetree
+        - tunnelblick
+        - kindle
+
+
 
     - name: install personal cask utilities
       homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
       with_items:
         - iterm2
+        - superduper
+        - caffeine
+        - the-unarchiver
+        - little-snitch
+        - istat-menus
+
+
 
 
   roles:
