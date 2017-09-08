@@ -36,6 +36,6 @@
 - src: https://github.com/superlumic/ansible-role-skylab.git
   name: roderik.superlumic-skylab
 
-- src: https://galaxy.ansible.com/gantsign/visual-studio-code.git
+- src: https://github.com/gantsign/ansible-role-visual-studio-code-extensions.git
   name: gantsign.visual-studio-code
   
