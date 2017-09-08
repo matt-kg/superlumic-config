@@ -5,14 +5,19 @@
 
   tasks:
     - name: install personal cask applications
-      homebrew_cask: name={{item}} state=latest
+      homebrew_cask: name={{item}} state=present
       with_items:
-        - iterm2
         - visual-studio-code
         - slack
         - google-chrome
         - chrome-devtools
         - tidal
+
+    - name: install personal cask utilities
+      homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
+      with_items:
+        - iterm2
+
 
   roles:
 #    - profile-developer
