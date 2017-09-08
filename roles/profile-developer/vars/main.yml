@@ -1,0 +1,5 @@
+
+node_versions:
+    - 6
+
+default_node_version: 6
