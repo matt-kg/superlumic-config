@@ -79,6 +79,7 @@
             - donjayamanne.python
             - haaaad.ansible
             - timonwong.ansible-autocomplete
+            - timonwong.shellcheck
             - mdickin.markdown-shortcuts
             - darkriszty.markdown-table-prettify
             - mauve.terraform
