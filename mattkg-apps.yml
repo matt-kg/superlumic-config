@@ -23,6 +23,7 @@
         - unicreds
         - python3
         - graphviz
+        - shellcheck
 
     - name: install python modules
       pip: name={{item}} state=latest
@@ -50,7 +51,6 @@
         - kindle
         - microsoft-office
         - p4merge
-        - shellcheck
 
     - name: install personal cask utilities
       homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
