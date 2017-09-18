@@ -86,6 +86,7 @@
             - mauve.terraform
             - DavidAnson.vscode-markdownlint
             - PeterJausovec.vscode-docker
+            - lukehoban.go
           visual_studio_code_extensions_absent:
             - seanmcbreen.Spell
 
