@@ -24,6 +24,7 @@
         - python3
         - graphviz
         - shellcheck
+        - yarn
 
     - name: install python modules
       pip: name={{item}} state=latest
