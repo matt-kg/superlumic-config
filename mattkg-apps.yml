@@ -53,6 +53,7 @@
         - kindle
         - microsoft-office
         - p4merge
+        - skype-for-business
 
     - name: install personal cask utilities
       homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
