@@ -90,6 +90,9 @@
             - DavidAnson.vscode-markdownlint
             - PeterJausovec.vscode-docker
             - lukehoban.go
+            - DanielThielking.aws-cloudformation-yaml
+            - aws-scripting-guy.cform
+            - tuxtina.json2yaml
           visual_studio_code_extensions_absent:
             - seanmcbreen.Spell
 
