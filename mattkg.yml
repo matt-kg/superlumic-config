@@ -37,7 +37,53 @@
     - roderik.superlumic-cli
     - roderik.superlumic-computername
     - roderik.superlumic-vim
-    - gantsign.visual-studio-code-extensions
+    - role: gantsign.visual-studio-code-extensions
+      users:
+        - username: mattkg
+          visual_studio_code_extensions:
+            - bungcip.better-toml
+            - dawhite.mustache
+            - dunstontc.dark-plus-syntax
+            - eamodio.gitlens
+            - EditorConfig.EditorConfig
+            - esbenp.prettier-vscode
+            - golang.go
+            - GrapeCity.gc-excelviewer
+            - hashicorp.terraform
+            - kddejong.vscode-cfn-lint
+            - ms-azuretools.vscode-docker
+            - ms-kubernetes-tools.vscode-kubernetes-tools
+            - ms-python.python
+            - ms-toolsai.jupyter
+            - ms-vscode-remote.remote-containers
+            - ms-vscode.cpptools
+            - ms-vscode.powershell
+            - ms-vsliveshare.vsliveshare
+            - oderwat.indent-rainbow
+            - oliversturm.fix-json
+            - redhat.vscode-yaml
+            - SirTori.indenticator
+            - Tyriar.sort-lines
+            - zhouronghui.propertylist
+            - streetsidesoftware.code-spell-checker
+            - wholroyd.jinja
+            - donjayamanne.python
+            - haaaad.ansible
+            - timonwong.ansible-autocomplete
+            - timonwong.shellcheck
+            - mdickin.markdown-shortcuts
+            - darkriszty.markdown-table-prettify
+            #- mauve.terraform
+            - DavidAnson.vscode-markdownlint
+            - PeterJausovec.vscode-docker
+            - lukehoban.go
+            - DanielThielking.aws-cloudformation-yaml
+            - aws-scripting-guy.cform
+            - tuxtina.json2yaml
+            - Rubymaniac.vscode-direnv
+          visual_studio_code_extensions_absent:
+            - seanmcbreen.Spell
+    
 
   tasks:
     - name: add necessary homebrew taps
@@ -270,53 +316,6 @@
     - git_user_name: matt-kg
     - git_user_email: mattkg@versent.com.au
     - preferred_shell: zsh
-    - users:
-        - username: mattkg
-          visual_studio_code_extensions:
-            - bungcip.better-toml
-            - dawhite.mustache
-            - dunstontc.dark-plus-syntax
-            - eamodio.gitlens
-            - EditorConfig.EditorConfig
-            - esbenp.prettier-vscode
-            - golang.go
-            - GrapeCity.gc-excelviewer
-            - hashicorp.terraform
-            - kddejong.vscode-cfn-lint
-            - ms-azuretools.vscode-docker
-            - ms-kubernetes-tools.vscode-kubernetes-tools
-            - ms-python.python
-            - ms-toolsai.jupyter
-            - ms-vscode-remote.remote-containers
-            - ms-vscode.cpptools
-            - ms-vscode.powershell
-            - ms-vsliveshare.vsliveshare
-            - oderwat.indent-rainbow
-            - oliversturm.fix-json
-            - redhat.vscode-yaml
-            - SirTori.indenticator
-            - Tyriar.sort-lines
-            - zhouronghui.propertylist
-            - streetsidesoftware.code-spell-checker
-            - wholroyd.jinja
-            - donjayamanne.python
-            - haaaad.ansible
-            - timonwong.ansible-autocomplete
-            - timonwong.shellcheck
-            - mdickin.markdown-shortcuts
-            - darkriszty.markdown-table-prettify
-            #- mauve.terraform
-            - DavidAnson.vscode-markdownlint
-            - PeterJausovec.vscode-docker
-            - lukehoban.go
-            - DanielThielking.aws-cloudformation-yaml
-            - aws-scripting-guy.cform
-            - tuxtina.json2yaml
-            - Rubymaniac.vscode-direnv
-          visual_studio_code_extensions_absent:
-            - seanmcbreen.Spell
-
-
     - osx_defaults:
       - domain: 'com.apple.dock'
         key: 'autohide'
