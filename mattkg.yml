@@ -227,6 +227,7 @@
         - skitch
         - sketchbook
         - discord
+        - intel-power-gadget
 
 
     # - name: install personal cask utilities
