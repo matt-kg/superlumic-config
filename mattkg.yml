@@ -39,9 +39,15 @@
     - roderik.superlumic-vim
 
   tasks:
+    - name: add necessary homebrew taps
+      homebrew_tap: tap={{item}} state=present
+      with_items:
+        - versent/homebrew-taps
+        - wallix/awless
+
 
     - name: install personal brew apps
-      community.general.homebrew: name={{item}} state=latest
+      homebrew: name={{item}} state=latest
       with_items:
         - mas
         - terraform
@@ -166,7 +172,7 @@
     #     - credstash
 
     - name: install personal cask applications
-      community.general.homebrew_cask: name={{item}} state=present
+      homebrew_cask: name={{item}} state=present
       with_items:
         - 1password
         - 1password-cli
