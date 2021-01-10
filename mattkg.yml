@@ -170,6 +170,7 @@
         - newman
         - kustomize
         - argocd
+        - starship
 
     # - name: install python modules
     #   pip: name={{item}} state=latest
@@ -258,7 +259,6 @@
 #         - { id: '1482454543', name: 'Twitter' }
         - { id: '1462114288', name: 'Grammarly for Safari' }
         - { id: '406056744', name: 'Evernote' }
-        - { id: '425955336', name: 'Skitch - Snap. Mark up. Share.' }
         - { id: '1295203466', name: 'Microsoft Remote Desktop' }
         
 
