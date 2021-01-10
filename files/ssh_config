@@ -8,3 +8,6 @@ ControlPersist yes
 
 Host *
   UseKeychain yes
+  ServerAliveInterval 300
+  ServerAliveCountMax 2
+  

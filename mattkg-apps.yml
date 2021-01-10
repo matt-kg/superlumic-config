@@ -55,10 +55,6 @@
         - microsoft-office
         - p4merge
         - skype-for-business
-
-    - name: install personal cask utilities
-      homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
-      with_items:
         - iterm2
         - superduper
         - caffeine
@@ -71,6 +67,10 @@
         - hex-fiend
         - dnscrypt
 
+    # - name: install personal cask utilities
+    #   homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
+    #   with_items:
+    #     - lots of things seem unhappy to be anywhere but /Applications these days
 
   roles:
 #    - profile-developer

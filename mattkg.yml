@@ -3,40 +3,279 @@
 - hosts: localhost
   connection: local
 
-  tasks:
-    - name: install node
-      homebrew: name={{item}} state=latest
+  pre_tasks:
+
+    - name: create ssh directory
+      become: yes
+      file:
+        path: "{{item}}"
+        state: directory
+        owner: root
+        group: wheel
+        mode: 0777
       with_items:
-        - node
-   - name: create ssh directory
-     become: yes
-     file:
-       path: "{{item}}"
-       state: directory
-       owner: root
-       group: wheel
-       mode: 0777
-     with_items:
-       - /etc/ssh
-   - name: personal ssh config
-     become: yes
-     copy:
-       src: files/ssh_config
-       dest: /etc/ssh_config
-   - name: personal ssh config in another location
-     become: yes
-     copy:
-       src: files/ssh_config
-       dest: /etc/ssh/ssh_config
+        - /etc/ssh
+    - name: personal ssh config
+      become: yes
+      copy:
+        src: files/ssh_config
+        dest: /etc/ssh_config
+    - name: personal ssh config in another location
+      become: yes
+      copy:
+        src: files/ssh_config
+        dest: /etc/ssh/ssh_config
+
+    # needed for the vscode-plugin role
+    - name: install vs-code cask
+      homebrew_cask: name=visual-studio-code state=present
 
   roles:
-   - profile-developer
-   - golang
+    - git-config
+    - homebrew
+    - roderik.superlumic-osx-defaults
+    - roderik.superlumic-cli
+    - roderik.superlumic-computername
+    - roderik.superlumic-vim
+
+  tasks:
+
+    - name: install personal brew apps
+      homebrew: name={{item}} state=latest
+      with_items:
+        - mas
+        - terraform
+        - awscli
+        - awless
+        - jq
+        - ack
+        - python3
+        - graphviz
+        - shellcheck
+        - yarn
+        - direnv
+        - packer
+        - freetype
+        - jasper
+        - libxml2
+        - popt
+        - fzf
+        - jpeg
+        - libxmlsec1
+        - pyenv
+        - utf8proc
+        - autoconf
+        - gawk
+        - libyaml
+        - watch
+        - gdbm
+        - kubectx
+        - little-cms2
+        - webp
+        - gettext
+        - kubernetes-cli
+        - lz4
+        - wget
+        - aws-sam-cli
+        - ghostscript
+        - kustomize
+        - mpfr
+        - readline
+        - x265
+        - git
+        - libde265
+        - ncurses
+        - rsync
+        - xmlto
+        - bash
+        - git-extras
+        - libevent
+        - nettle
+        - ruby
+        - xxhash
+        - bash-completion	
+        - glib
+        - libffi
+        - oath-toolkit 
+        - saml2aws
+        - xz
+        - bdw-gc
+        - gmp
+        - libgcrypt
+        - oniguruma
+        - saw
+        - yamllint
+        - brew-gem
+        - gnu-getopt
+        - libgpg-error
+        - openexr
+        - shared-mime-info
+        - zbar
+        - cfn-lint
+        - gnu-indent
+        - libheif
+        - openjpeg
+        - zsh-autosuggestions
+        - coreutils
+        - gnu-sed
+        - libidn2
+        - openssl
+        - sqlite
+        - zsh-completions
+        - dcraw
+        - gnu-tar
+        - liblqr
+        - p11-kit
+        - stern
+        - zsh-syntax-highlighting
+        - gnutls
+        - libomp
+        - packer
+        - telnet
+        - zstd
+        - docbook
+        - grep
+        - libpng
+        - pcre
+        - docbook-xsl
+        - guile
+        - libtasn1
+        - pcre2
+        - tmux
+        - eksctl
+        - helm
+        - libtiff
+        - ping-devops
+        - tree
+        - findutils
+        - ilmbase
+        - libtool
+        - pkg-config
+        - ufraw
+        - fontconfig
+        - imagemagick
+        - libunistring
+        - popeye
+        - unbound
+        - k9s
+        - newman
+
+    # - name: install python modules
+    #   pip: name={{item}} state=latest
+    #   with_items:
+    #     - credstash
+
+    - name: install personal cask applications
+      homebrew_cask: name={{item}} state=present
+      with_items:
+        - 1password
+        - 1password-cli
+        - slack #installed via AppStore
+        - google-chrome
+        - chrome-devtools
+        - firefox
+        - tidal
+        - grammarly
+        - dropbox
+        #- vmware-fusion
+        - docker
+        - plex-media-player
+        - evernote
+        - vlc
+        #- sourcetree
+        #- tunnelblick
+        #- kindle
+        - microsoft-office
+        - microsoft-teams
+        - p4merge
+        #- skype-for-business
+        - iterm2
+        - superduper
+        - caffeine
+        #- the-unarchiver
+        - keka
+        #- little-snitch
+        - istat-menus
+        - oversight
+        # - spectacle
+        - grandperspective
+        - hex-fiend
+        - omnigraffle
+        #- dnscrypt
+        - private-internet-access
+        - expressvpn
+        - transmission
+        - roon
+        - zoom
+        - cyberduck
+        - postman
+        - xld
+        - synergy
+        - cheatsheet
+        - apache-directory-studio
+        - skitch
+        - sketchbook
+        - discord
+
+
+    # - name: install personal cask utilities
+    #   homebrew_cask: name={{item}} state=present install_options='appdir=/Applications/Utilities'
+    #   with_items:
+    #     - lots of things seem unhappy to be anywhere but /Applications these days
+
 
   vars:
-    - computername: 'newbook'
+    - computername: 'smol'
     - git_user_name: matt-kg
     - git_user_email: mattkg@versent.com.au
+    - preferred_shell: zsh
+    - users:
+        - username: mattkg
+          visual_studio_code_extensions:
+            - bungcip.better-toml
+            - dawhite.mustache
+            - dunstontc.dark-plus-syntax
+            - eamodio.gitlens
+            - EditorConfig.EditorConfig
+            - esbenp.prettier-vscode
+            - golang.go
+            - GrapeCity.gc-excelviewer
+            - hashicorp.terraform
+            - kddejong.vscode-cfn-lint
+            - ms-azuretools.vscode-docker
+            - ms-kubernetes-tools.vscode-kubernetes-tools
+            - ms-python.python
+            - ms-toolsai.jupyter
+            - ms-vscode-remote.remote-containers
+            - ms-vscode.cpptools
+            - ms-vscode.powershell
+            - ms-vsliveshare.vsliveshare
+            - oderwat.indent-rainbow
+            - oliversturm.fix-json
+            - redhat.vscode-yaml
+            - SirTori.indenticator
+            - Tyriar.sort-lines
+            - zhouronghui.propertylist
+            - streetsidesoftware.code-spell-checker
+            - wholroyd.jinja
+            - donjayamanne.python
+            - haaaad.ansible
+            - timonwong.ansible-autocomplete
+            - timonwong.shellcheck
+            - mdickin.markdown-shortcuts
+            - darkriszty.markdown-table-prettify
+            #- mauve.terraform
+            - DavidAnson.vscode-markdownlint
+            - PeterJausovec.vscode-docker
+            - lukehoban.go
+            - DanielThielking.aws-cloudformation-yaml
+            - aws-scripting-guy.cform
+            - tuxtina.json2yaml
+            - Rubymaniac.vscode-direnv
+          visual_studio_code_extensions_absent:
+            - seanmcbreen.Spell
+
+
     - osx_defaults:
       - domain: 'com.apple.dock'
         key: 'autohide'
@@ -70,10 +309,10 @@
         key: 'InitialKeyRepeat'
         type: integer
         value: 15
-      - domain: 'com.apple.menuextra.clock'
-        key: 'DateFormat'
-        type: string
-        value: EEE MMM d  HH:mm
+      # - domain: 'com.apple.menuextra.clock'
+      #   key: 'DateFormat'
+      #   type: string
+      #   value: EEE MMM d  HH:mm
       - domain: 'com.apple.menuextra.battery'
         key: 'ShowPercent'
         type: string
