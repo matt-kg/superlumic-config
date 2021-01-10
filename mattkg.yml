@@ -37,6 +37,7 @@
     - roderik.superlumic-cli
     - roderik.superlumic-computername
     - roderik.superlumic-vim
+    - gantsign.visual-studio-code-extensions
 
   tasks:
     - name: add necessary homebrew taps
