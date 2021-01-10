@@ -45,6 +45,7 @@
         - versent/homebrew-taps
         - wallix/awless
         - aws/tap
+        - TylerBrock/saw
 
 
     - name: install personal brew apps
