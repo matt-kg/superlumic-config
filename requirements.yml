@@ -9,8 +9,8 @@
 - src: https://github.com/superlumic/ansible-role-computername.git
   name: roderik.superlumic-computername
 
-# - src: https://github.com/superlumic/ansible-role-cli.git
-#   name: roderik.superlumic-cli
+- src: https://github.com/superlumic/ansible-role-cli.git
+  name: roderik.superlumic-cli
 
 # - src: https://github.com/superlumic/ansible-role-mysql.git
 #   name: roderik.superlumic-mysql
