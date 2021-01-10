@@ -245,7 +245,7 @@
       when: item.id not in mas_list.stdout_lines
       with_items:
         - { id: '409183694', name: 'Keynote' }
-        - { id: '1142578753', name: 'OmniGraffle' }
+#        - { id: '1142578753', name: 'OmniGraffle' }
         - { id: '1333542190', name: '1Password 7' }
         - { id: '1289583905', name: 'Pixelmator Pro' }
         - { id: '408981426', name: 'Aperture' }
@@ -258,7 +258,7 @@
 #         - { id: '425424353', name: 'The Unarchiver' }
 #         - { id: '1529448980', name: 'Reeder 5.' }
 #         - { id: '1482454543', name: 'Twitter' }
-        - { id: '1462114288', name: 'Grammarly for Safari' }
+#        - { id: '1462114288', name: 'Grammarly for Safari' }
         - { id: '406056744', name: 'Evernote' }
         - { id: '1295203466', name: 'Microsoft Remote Desktop' }
         
