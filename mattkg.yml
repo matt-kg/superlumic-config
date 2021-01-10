@@ -229,6 +229,7 @@
         - sketchbook
         - discord
         - intel-power-gadget
+        - retroactive
 
 
     # - name: install personal cask utilities
