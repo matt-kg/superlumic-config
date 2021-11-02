@@ -116,6 +116,7 @@
         - libxml2
         - popt
         - fzf
+        - istat-menus
         - jpeg
         - libxmlsec1
         - pyenv
