@@ -20,11 +20,11 @@
       copy:
         src: files/ssh_config
         dest: /etc/ssh_config
-    - name: personal ssh config in another location
-      become: yes
-      copy:
-        src: files/ssh_config
-        dest: /etc/ssh/ssh_config
+#     - name: personal ssh config in another location
+#       become: yes
+#       copy:
+#         src: files/ssh_config
+#         dest: /etc/ssh/ssh_config
 
     # needed for the vscode-plugin role
     - name: install vs-code cask
@@ -108,7 +108,7 @@
         - python3
         - graphviz
         - shellcheck
-        - yarn
+#         - yarn
         - direnv
         - packer
         - freetype
@@ -130,6 +130,9 @@
         - webp
         - gettext
         - kubernetes-cli
+        - kubectl-argo-rollouts
+        - helm
+        - derailed/k9s/k9s
         - lz4
         - wget
         - aws-sam-cli
@@ -262,7 +265,7 @@
         - omnigraffle
         #- dnscrypt
         - private-internet-access
-        - expressvpn
+#         - expressvpn
         - transmission
         - roon
         - zoom
@@ -272,11 +275,11 @@
         - synergy
         - cheatsheet
         - apache-directory-studio
-        - skitch
+#         - skitch
         - sketchbook
         - discord
-        - intel-power-gadget
-        - retroactive
+#         - intel-power-gadget
+#         - retroactive
 
 
     # - name: install personal cask utilities
@@ -312,8 +315,8 @@
 
 
   vars:
-    - computername: 'smol'
-    - git_user_name: matt-kg
+    - computername: 'silversliver'
+    - git_user_name: mattkg
     - git_user_email: mattkg@versent.com.au
     - preferred_shell: zsh
     - osx_defaults:
