@@ -233,7 +233,7 @@
         - kustomize
         - argocd
         - starship
-        - homebrew/cask-drivers/logitech-options
+#         - homebrew/cask-drivers/logitech-options
        
 
     # - name: install python modules
