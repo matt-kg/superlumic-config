@@ -81,6 +81,11 @@
             - aws-scripting-guy.cform
             - tuxtina.json2yaml
             - Rubymaniac.vscode-direnv
+            - GitLab.gitlab-workflow
+            - leodevbro.blockman
+            - redhat.vscode-commons
+            - waderyan.gitblame
+            - yzhang.markdown-all-in-one
           visual_studio_code_extensions_absent:
             - seanmcbreen.Spell
     
@@ -102,9 +107,19 @@
         - mas
         - terraform
         - awscli
+        - antigen
+        - libev
+        - nghttp2
+        - parallel
+        - pipx
+        - font-fira-code-nerd-font
+        - font-fira-mono-nerd-font
+        - logitech-options
 #         - awless
         - jq
         - ack
+        - go
+        - gotk
         - python3
         - graphviz
         - shellcheck
