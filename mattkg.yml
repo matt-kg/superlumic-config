@@ -99,6 +99,7 @@
         - aws/tap
         - TylerBrock/saw
         - pingidentity/devops
+        - homebrew/cask-drivers
 
 
     - name: install personal brew apps
@@ -232,6 +233,7 @@
         - kustomize
         - argocd
         - starship
+        - homebrew/cask-drivers/logitech-options
        
 
     # - name: install python modules
@@ -255,7 +257,6 @@
         - tidal
         - grammarly
         - dropbox
-        - onedrive
         #- vmware-fusion
         - docker
         - plex-media-player
