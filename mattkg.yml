@@ -116,7 +116,7 @@
         - libxml2
         - popt
         - fzf
-        - istat-menus
+#         - istat-menus # app is missing checksum, skips install
         - jpeg
         - libxmlsec1
         - pyenv
@@ -131,7 +131,7 @@
         - webp
         - gettext
         - kubernetes-cli
-        - kubectl-argo-rollouts
+        - argoproj/tap/kubectl-argo-rollouts
         - helm
         - derailed/k9s/k9s
         - lz4
