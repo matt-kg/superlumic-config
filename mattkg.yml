@@ -48,7 +48,7 @@
             - EditorConfig.EditorConfig
             - esbenp.prettier-vscode
             - golang.go
-            - GrapeCity.gc-excelviewer
+#             - GrapeCity.gc-excelviewer
             - hashicorp.terraform
             - kddejong.vscode-cfn-lint
             - ms-azuretools.vscode-docker
