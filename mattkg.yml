@@ -116,7 +116,6 @@
         - libxml2
         - popt
         - fzf
-#         - istat-menus # app is missing checksum, skips install
         - jpeg
         - libxmlsec1
         - pyenv
@@ -231,7 +230,7 @@
     - name: install personal cask applications
       homebrew_cask: name={{item}} state=present
       with_items:
-        - 1password
+#         - 1password # installed separately
         - 1password-cli
         - slack #installed via AppStore
         - google-chrome
@@ -254,7 +253,7 @@
         #- skype-for-business
         - iterm2
         - superduper
-        - caffeine
+#         - caffeine # replaces with Amphetamine from MAS
         #- the-unarchiver
         - keka
         #- little-snitch
@@ -263,7 +262,7 @@
         # - spectacle
         - grandperspective
         - hex-fiend
-        - omnigraffle
+#         - omnigraffle
         #- dnscrypt
         - private-internet-access
 #         - expressvpn
@@ -297,7 +296,7 @@
       with_items:
         - { id: '409183694', name: 'Keynote' }
 #        - { id: '1142578753', name: 'OmniGraffle' }
-        - { id: '1333542190', name: '1Password 7' }
+#         - { id: '1333542190', name: '1Password 7' }
         - { id: '1289583905', name: 'Pixelmator Pro' }
         - { id: '408981426', name: 'Aperture' }
 #         - { id: '1384080005', name: 'Tweetbot' }
@@ -312,6 +311,7 @@
 #        - { id: '1462114288', name: 'Grammarly for Safari' }
         - { id: '406056744', name: 'Evernote' }
         - { id: '1295203466', name: 'Microsoft Remote Desktop' }
+        - { id: '937984704', name: 'Amphetamine' }
         
 
 
