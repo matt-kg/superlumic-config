@@ -112,14 +112,10 @@
         - nghttp2
         - parallel
         - pipx
-        - font-fira-code-nerd-font
-        - font-fira-mono-nerd-font
-        - logitech-options
 #         - awless
         - jq
         - ack
         - go
-        - gotk
         - python3
         - graphviz
         - shellcheck
@@ -236,7 +232,7 @@
         - kustomize
         - argocd
         - starship
-        - brave-browser
+       
 
     # - name: install python modules
     #   pip: name={{item}} state=latest
@@ -252,6 +248,10 @@
         - google-chrome
         - chrome-devtools
         - firefox
+        - brave-browser
+        - font-fira-code-nerd-font
+        - font-fira-mono-nerd-font
+        - logitech-options
         - tidal
         - grammarly
         - dropbox
