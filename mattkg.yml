@@ -67,16 +67,16 @@
             - zhouronghui.propertylist
             - streetsidesoftware.code-spell-checker
             - wholroyd.jinja
-            - donjayamanne.python
-            - haaaad.ansible
-            - timonwong.ansible-autocomplete
+#             - donjayamanne.python
+#             - haaaad.ansible
+#             - timonwong.ansible-autocomplete
             - timonwong.shellcheck
             - mdickin.markdown-shortcuts
             - darkriszty.markdown-table-prettify
             #- mauve.terraform
             - DavidAnson.vscode-markdownlint
-            - PeterJausovec.vscode-docker
-            - lukehoban.go
+#             - PeterJausovec.vscode-docker
+#             - lukehoban.go
             - DanielThielking.aws-cloudformation-yaml
             - aws-scripting-guy.cform
             - tuxtina.json2yaml
