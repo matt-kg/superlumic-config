@@ -221,6 +221,7 @@
         - kustomize
         - argocd
         - starship
+        - brave-browser
 
     # - name: install python modules
     #   pip: name={{item}} state=latest
@@ -232,13 +233,14 @@
       with_items:
 #         - 1password # installed separately
         - 1password-cli
-        - slack #installed via AppStore
+        - slack
         - google-chrome
         - chrome-devtools
         - firefox
         - tidal
         - grammarly
         - dropbox
+        - onedrive
         #- vmware-fusion
         - docker
         - plex-media-player
@@ -257,7 +259,7 @@
         #- the-unarchiver
         - keka
         #- little-snitch
-        - istat-menus
+#         - istat-menus 
         - oversight
         # - spectacle
         - grandperspective
